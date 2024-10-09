@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lab10.CraftShop">
+    <Position X="8.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAEAAAgAAAAAAAAAAEAIAAAAACAAAAABA=</HashCode>
+      <FileName>CraftShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab10.Factory">
+    <Position X="3.25" Y="1" Width="2" />
+    <InheritanceLine Type="lab10.Production" ManuallyRouted="true">
+      <Path>
+        <Point X="2.75" Y="2.419" />
+        <Point X="3.25" Y="2.419" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAgAIAAAAAAAAEAIAAAAACAAAAABA=</HashCode>
+      <FileName>Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab10.Production">
+    <Position X="0.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAACAAAQEgAAAAAACAAAEAIAAAAACAAAAABA=</HashCode>
+      <FileName>Production.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="lab10.Workshop">
+    <Position X="5.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAICAAAAAgAAAAAAAAAAEAIAAAAACAAAAABA=</HashCode>
+      <FileName>Workshop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab10.ProductionCapacityComparer">
+    <Position X="11.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ProductionCapacityComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
