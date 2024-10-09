@@ -12,7 +12,7 @@ namespace lab10
         {
             List<Production> productions = new();
             List<Factory> factories = [];
-            
+            //git test
 
         }
     }
