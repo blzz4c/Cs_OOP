@@ -8,11 +8,12 @@ namespace lab10
 {
     public class Factory : Production
     {
+        protected string location = "Unknown";
         public string Location
         {
             get
             {
-                return Location!;
+                return location!;
             }
             set
             {
@@ -22,14 +23,11 @@ namespace lab10
                 }
                 else
                 {
-                    Location = value;
+                    location = value;
                 }
             }
         }
-        public Factory()
-        {
-            Location = "Unknown";
-        }
+        public Factory() { }
         public Factory(string productType, int capacity, string location) : base(productType, capacity)
         {
             Location = location;

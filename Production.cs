@@ -9,13 +9,14 @@ namespace lab10
 {
     public class Production : IInit, IComparable<Production>, ICloneable
     {
+        protected string productType = "Unknown";
+        protected int capacity;
         public string ProductType 
         {
             get
             {
-                return ProductType!;
+                return productType!;
             }
-
             set
             {
                 if (value == null || value == "")
@@ -24,7 +25,7 @@ namespace lab10
                 }
                 else
                 {
-                    ProductType = value;
+                    productType = value;
                 }
             }
         }
@@ -32,7 +33,7 @@ namespace lab10
         {
             get
             {
-                return Capacity!;
+                return capacity!;
             }
             set
             {
@@ -42,15 +43,11 @@ namespace lab10
                 }
                 else
                 {
-                    Capacity = value;
+                    capacity = value;
                 }
             }
         }
-        public Production()
-        {
-            ProductType = "Unknown";
-            Capacity = 0;
-        }
+        public Production() { }
         public Production(string productType, int capacity)
         {
             ProductType = productType;
@@ -60,7 +57,7 @@ namespace lab10
         public virtual void Show()
         {
             Console.WriteLine($"Тип продукта: {ProductType}\n" +
-                $"Мощность пр-ва: {Capacity}\n");
+                $"Мощность пр-ва: {Capacity}");
         }
         public virtual void Init()
         {
@@ -100,6 +97,10 @@ namespace lab10
         public virtual object Clone()
         {
             return new Production(this);
+        }
+        public Production ShallowCopy()
+        {
+            return (Production)this.MemberwiseClone();
         }
     }
 }

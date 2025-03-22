@@ -8,28 +8,26 @@ namespace lab10
 {
     public class CraftShop : Workshop
     {
+        protected int numberOfPeople;
         public int NumberOfPeople
         {
             get
             {
-                return NumberOfPeople;
+                return numberOfPeople;
             }
             set
             {
-                if (NumberOfPeople < 0)
+                if (value < 0)
                 {
                     throw new ArgumentException($"Ошибка! {nameof(NumberOfPeople)} не может быть меньше нуля!");
                 }
                 else
                 {
-                    NumberOfPeople = value;
+                    numberOfPeople = value;
                 }
             }
         }
-        public CraftShop()
-        {
-            NumberOfPeople = 0;
-        }
+        public CraftShop() { }
         public CraftShop(
             string productType, int capacity, string location, string workshopGoal, int numberOfPeople) :
             base(productType, capacity, location, workshopGoal)

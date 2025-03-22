@@ -8,11 +8,26 @@ namespace lab10
 {
     public class Workshop : Factory
     {
-        public string WorkshopGoal;
-        public Workshop()
+        protected string workshopGoal = "Unknown";
+        public string WorkshopGoal
         {
-            WorkshopGoal = "Unknown";
+            get
+            {
+                return workshopGoal;
+            }
+            set
+            {
+                if (value == null || value == "")
+                {
+                    throw new ArgumentException($"Ошибка! {nameof(WorkshopGoal)} не может быть меньше нуля!");
+                }
+                else
+                {
+                    workshopGoal = value;
+                }
+            }
         }
+        public Workshop() { }
         public Workshop(
             string productType, int capacity, string location, string workshopGoal) :
             base(productType, capacity, location)
